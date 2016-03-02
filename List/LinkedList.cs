@@ -57,7 +57,20 @@ namespace List
 
         public override void DeleteLast()
         {
-            //burayı yazacaz..
+            Node item = Head;
+            int i = 0;
+            while (item != null)
+            {
+                if (i == Size-1)
+                {
+                    item = null;
+                    break;
+                }
+                item = item.Next;
+                i++;
+            }
+
+
         }
 
         public override void DeletePos(int position)
@@ -78,6 +91,7 @@ namespace List
             {
                 temp += "-->" + item.Data;
                 item = item.Next;
+                System.Windows.Forms.MessageBox.Show("Test");
             }
 
             return temp;
