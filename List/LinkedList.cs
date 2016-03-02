@@ -76,7 +76,7 @@ namespace List
             Node item = Head;
             while (item != null)
             {
-                temp += "-->" + item.Data;
+                temp += "-->" + item.Data;// +" Next -->" + item.Next;
                 item = item.Next;
             }
 
