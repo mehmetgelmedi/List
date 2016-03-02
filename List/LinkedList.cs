@@ -58,18 +58,18 @@ namespace List
         public override void DeleteLast()
         {
             Node item = Head;
-            int i = 0;
+            int i = 1;
             while (item != null)
             {
                 if (i == Size-1)
                 {
-                    item = null;
+                    item.Next = null;
                     break;
                 }
                 item = item.Next;
                 i++;
             }
-
+            Size--;
 
         }
 
@@ -91,7 +91,6 @@ namespace List
             {
                 temp += "-->" + item.Data;// +" Next -->" + item.Next;
                 item = item.Next;
-                System.Windows.Forms.MessageBox.Show("Test");
             }
 
             return temp;

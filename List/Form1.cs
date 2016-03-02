@@ -32,7 +32,7 @@ namespace List
             //ll.DeleteLast();
             MessageBox.Show(ll.DisplayElements());
             //ll.DeleteLast();
-            //ll.DeleteLast();
+            ll.DeleteLast();
             MessageBox.Show(ll.DisplayElements());
         }
 
