@@ -1,0 +1,9 @@
+C:\Users\ADMIN\List\List\bin\Debug\List.exe.config
+C:\Users\ADMIN\List\List\bin\Debug\List.exe
+C:\Users\ADMIN\List\List\bin\Debug\List.pdb
+C:\Users\ADMIN\List\List\obj\Debug\List.csprojResolveAssemblyReference.cache
+C:\Users\ADMIN\List\List\obj\Debug\List.Form1.resources
+C:\Users\ADMIN\List\List\obj\Debug\List.Properties.Resources.resources
+C:\Users\ADMIN\List\List\obj\Debug\List.csproj.GenerateResource.Cache
+C:\Users\ADMIN\List\List\obj\Debug\List.exe
+C:\Users\ADMIN\List\List\obj\Debug\List.pdb
