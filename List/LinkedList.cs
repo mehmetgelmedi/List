@@ -80,7 +80,7 @@ namespace List
 
         public override Node GetElement(int position)
         {
-            throw new NotImplementedException();
+            throw new NotImplementedException(); // hata verir
         }
 
         public override string DisplayElements()
