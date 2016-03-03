@@ -30,45 +30,7 @@ namespace List
 
         public override void InsertLast(int value)
         {
-        //  Node  first = new Node();
-        //    if (first == null)
-        //    {
-        //        first = first.Next;
-        //    }
-        //    Node newLast = new Node();
-        //    while (first.Next != null)
-        //    {
-        //        first = first.Next;
-        //    }
-        //    newLast.Data= value;
-        //    first.Next = newLast;
-        //    first = newLast;
-            //Node last = new Node();
-            //last.Data = value;
-           
-            //Node node = first;
-            //if (first == null)
-            //{
-            //    first = last;
-            //}
-            //else
-            //{
-            //    while (node.Next != null)
-            //    {
-            //        node = node.Next;
-            //    }
-            //    node.Next = last;
-            //}
-            //Node last ;
-            //Node newLast = new Node();
-            
-            //while (last.Next != null)
-            //{
-            //    last = newLast.Next;
-            //}
-            //newLast.Data = value;
-            //newLast.Next = last;
-            //last = newLast;  
+        //insert last işlemi başarı ile gerçekleşiyor.
             Node newLast = new Node();
             if (Head == null)
             {
