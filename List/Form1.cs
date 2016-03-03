@@ -33,7 +33,26 @@ namespace List
             MessageBox.Show(ll.DisplayElements());
             //ll.DeleteLast();
             ll.DeleteLast();
+            MessageBox.Show(ll.DisplayElements());
             ll.InsertLast(99);
+            MessageBox.Show(ll.DisplayElements());
+            ll.InsertLast(100);
+            ll.InsertLast(101);
+            ll.InsertLast(102);
+            MessageBox.Show(ll.DisplayElements());
+            // not: ll.DeletePos(0) ilk eleman sorun yok
+            // bu şekilde çalışıyor
+            ll.DeletePos(5); 
+            ll.DeletePos(4);
+            ll.DeletePos(3);
+            ll.DeletePos(2);
+            ll.DeletePos(1);
+            // bu şekilde çalışmıyor
+            //ll.DeletePos(1);
+            //ll.DeletePos(2);
+            //ll.DeletePos(3);
+            //ll.DeletePos(4);
+            //ll.DeletePos(5);
             MessageBox.Show(ll.DisplayElements());
         }
 

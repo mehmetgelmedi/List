@@ -126,10 +126,38 @@ namespace List
             Size--;
 
         }
-
+        public Node rec(int position)
+        {
+            Node item = Head;
+            Node pos = null;
+            int i = 0;
+            while (item != null)
+            {
+                if (i == position)
+                {
+                    pos = item;
+                }
+                item = item.Next;
+                i++;
+            }
+            return pos;
+        }
         public override void DeletePos(int position)
         {
-            throw new NotImplementedException(); // hata verir
+            
+            Node item = Head;
+            //Node temp = null;
+            Node pos = null;
+            if (position == 0) //head
+            {
+                DeleteFirst();
+                return;
+            }
+            pos = rec(position);
+            item = rec(position - 1);
+            item.Next = pos.Next;
+            pos = null;
+            Size--;
         }
 
         public override Node GetElement(int position)
