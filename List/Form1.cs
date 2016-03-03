@@ -42,17 +42,24 @@ namespace List
             MessageBox.Show(ll.DisplayElements());
             // not: ll.DeletePos(0) ilk eleman sorun yok
             // bu şekilde çalışıyor
-            ll.DeletePos(5); 
-            ll.DeletePos(4);
-            ll.DeletePos(3);
-            ll.DeletePos(2);
-            ll.DeletePos(1);
+            //ll.DeletePos(5);
+            //ll.DeletePos(4);
+            //ll.DeletePos(3);
+            //ll.DeletePos(2);
+            //ll.DeletePos(1);
             // bu şekilde çalışmıyor
             //ll.DeletePos(1);
             //ll.DeletePos(2);
             //ll.DeletePos(3);
             //ll.DeletePos(4);
-            //ll.DeletePos(5);
+            //ll.DeletePos(2);
+            //MessageBox.Show(ll.GetElement(0).ToString()); // node
+            //MessageBox.Show(ll.GetElement(2).Data.ToString()); // değeri
+            //MessageBox.Show(ll.GetElement(2).Next.ToString()); // sonraki adres
+            ll.InsertPos(3, 5);
+            ll.InsertPos(4, 9);
+            MessageBox.Show(ll.DisplayElements());
+            ll.DeletePos(3);
             MessageBox.Show(ll.DisplayElements());
         }
 

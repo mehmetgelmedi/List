@@ -51,7 +51,21 @@ namespace List
 
         public override void InsertPos(int position, int value)
         {
-            throw new NotImplementedException();
+            Node newNode = new Node { Data = value };
+            Node posNode = null;
+            Node tempNext = null;
+            if (Head == null)
+                InsertFirst(value);
+            
+            else
+            {
+                posNode = GetElement(position);
+                tempNext = posNode.Next;
+                posNode.Next = newNode;
+                newNode.Next = tempNext;
+            }
+
+
         }
 
         public override void DeleteFirst()
@@ -88,7 +102,25 @@ namespace List
             Size--;
 
         }
-        public Node rec(int position)
+        public override void DeletePos(int position)
+        {
+            
+            Node item = Head;
+            //Node temp = null;
+            Node pos = null;
+            if (position == 0) //head
+            {
+                DeleteFirst();
+                return;
+            }
+            pos = GetElement(position);
+            item = GetElement(position - 1);
+            item.Next = pos.Next;
+            pos = null;
+            Size--;
+        }
+
+        public override Node GetElement(int position)
         {
             Node item = Head;
             Node pos = null;
@@ -103,28 +135,6 @@ namespace List
                 i++;
             }
             return pos;
-        }
-        public override void DeletePos(int position)
-        {
-            
-            Node item = Head;
-            //Node temp = null;
-            Node pos = null;
-            if (position == 0) //head
-            {
-                DeleteFirst();
-                return;
-            }
-            pos = rec(position);
-            item = rec(position - 1);
-            item.Next = pos.Next;
-            pos = null;
-            Size--;
-        }
-
-        public override Node GetElement(int position)
-        {
-            throw new NotImplementedException(); // hata verir
         }
 
         public override string DisplayElements()
