@@ -33,6 +33,7 @@ namespace List
             MessageBox.Show(ll.DisplayElements());
             //ll.DeleteLast();
             ll.DeleteLast();
+            ll.InsertLast(99);
             MessageBox.Show(ll.DisplayElements());
         }
 
