@@ -56,7 +56,6 @@ namespace List
             Node tempNext = null;
             if (Head == null)
                 InsertFirst(value);
-            
             else
             {
                 posNode = GetElement(position);
@@ -64,8 +63,6 @@ namespace List
                 posNode.Next = newNode;
                 newNode.Next = tempNext;
             }
-
-
         }
 
         public override void DeleteFirst()
@@ -106,7 +103,6 @@ namespace List
         {
             
             Node item = Head;
-            //Node temp = null;
             Node pos = null;
             if (position == 0) //head
             {
@@ -143,7 +139,7 @@ namespace List
             Node item = Head;
             while (item != null)
             {
-                temp += "-->" + item.Data;// +" Next -->" + item.Next;
+                temp += "-->" + item.Data;
                 item = item.Next;
             }
 

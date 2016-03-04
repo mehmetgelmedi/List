@@ -20,47 +20,18 @@ namespace List
         private void btnTest_Click(object sender, EventArgs e)
         {
             LinkedList ll = new LinkedList();
-            //ll.InsertFirst(4);
-            ////ll.InsertLast(5);
-            //MessageBox.Show(ll.DisplayElements());
-            //ll.InsertFirst(1);
-            //ll.InsertFirst(2);
-            //ll.InsertFirst(8);
-            //MessageBox.Show(ll.DisplayElements());
-            //ll.DeleteFirst();
-            //MessageBox.Show(ll.DisplayElements());
-            ////ll.DeleteLast();
-            //MessageBox.Show(ll.DisplayElements());
-            ////ll.DeleteLast();
-            //ll.DeleteLast();
-            //MessageBox.Show(ll.DisplayElements());
-            //ll.InsertLast(99);
-            //MessageBox.Show(ll.DisplayElements());
-            //ll.InsertLast(100);
-            //ll.InsertLast(101);
-            //ll.InsertLast(102);
-            //MessageBox.Show(ll.DisplayElements());
-            // not: ll.DeletePos(0) ilk eleman sorun yok
-            // bu şekilde çalışıyor
-            //ll.DeletePos(5);
-            //ll.DeletePos(4);
-            //ll.DeletePos(3);
-            //ll.DeletePos(2);
-            //ll.DeletePos(1);
-            // bu şekilde çalışmıyor
-            //ll.DeletePos(1);
-            //ll.DeletePos(2);
-            //ll.DeletePos(3);
-            //ll.DeletePos(4);
-            //ll.DeletePos(2);
-            //MessageBox.Show(ll.GetElement(0).ToString()); // node
-            //MessageBox.Show(ll.GetElement(2).Data.ToString()); // değeri
-            //MessageBox.Show(ll.GetElement(2).Next.ToString()); // sonraki adres
+            ll.InsertFirst(1);
+            ll.InsertFirst(2);
+            ll.InsertFirst(3);
+            ll.InsertLast(4);
             ll.InsertPos(3, 5);
-            ll.InsertPos(4, 9);
             MessageBox.Show(ll.DisplayElements());
-            ll.DeletePos(3);
+            MessageBox.Show("2.indisteki eleman : " + ll.GetElement(2).Data.ToString());
+            ll.DeleteFirst();
+            ll.DeleteLast();
+            ll.DeletePos(1);
             MessageBox.Show(ll.DisplayElements());
+
         }
 
         private void button1_Click(object sender, EventArgs e)

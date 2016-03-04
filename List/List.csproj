@@ -51,7 +51,7 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="LinkedList.cs" />
-    <Compile Include="ListADT.cs" />
+    <Compile Include="LinkedListADT.cs" />
     <Compile Include="Node.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
