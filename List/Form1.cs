@@ -20,26 +20,26 @@ namespace List
         private void btnTest_Click(object sender, EventArgs e)
         {
             LinkedList ll = new LinkedList();
-            ll.InsertFirst(4);
-            //ll.InsertLast(5);
-            MessageBox.Show(ll.DisplayElements());
-            ll.InsertFirst(1);
-            ll.InsertFirst(2);
-            ll.InsertFirst(8);
-            MessageBox.Show(ll.DisplayElements());
-            ll.DeleteFirst();
-            MessageBox.Show(ll.DisplayElements());
+            //ll.InsertFirst(4);
+            ////ll.InsertLast(5);
+            //MessageBox.Show(ll.DisplayElements());
+            //ll.InsertFirst(1);
+            //ll.InsertFirst(2);
+            //ll.InsertFirst(8);
+            //MessageBox.Show(ll.DisplayElements());
+            //ll.DeleteFirst();
+            //MessageBox.Show(ll.DisplayElements());
+            ////ll.DeleteLast();
+            //MessageBox.Show(ll.DisplayElements());
+            ////ll.DeleteLast();
             //ll.DeleteLast();
-            MessageBox.Show(ll.DisplayElements());
-            //ll.DeleteLast();
-            ll.DeleteLast();
-            MessageBox.Show(ll.DisplayElements());
-            ll.InsertLast(99);
-            MessageBox.Show(ll.DisplayElements());
-            ll.InsertLast(100);
-            ll.InsertLast(101);
-            ll.InsertLast(102);
-            MessageBox.Show(ll.DisplayElements());
+            //MessageBox.Show(ll.DisplayElements());
+            //ll.InsertLast(99);
+            //MessageBox.Show(ll.DisplayElements());
+            //ll.InsertLast(100);
+            //ll.InsertLast(101);
+            //ll.InsertLast(102);
+            //MessageBox.Show(ll.DisplayElements());
             // not: ll.DeletePos(0) ilk eleman sorun yok
             // bu şekilde çalışıyor
             //ll.DeletePos(5);
