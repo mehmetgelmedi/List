@@ -16,79 +16,60 @@ namespace List
         {
             InitializeComponent();
         }
-
-        private void btnTest_Click(object sender, EventArgs e)
+        LinkedList objListe;
+        private void btnAdim2_Click(object sender, EventArgs e)
         {
-            LinkedList ll = new LinkedList();
-            ll.InsertFirst(1);
-            ll.InsertFirst(2);
-            ll.InsertFirst(3);
-            ll.InsertLast(4);
-            ll.InsertPos(3, 5);
-            MessageBox.Show(ll.DisplayElements());
-            MessageBox.Show("2.indisteki eleman : " + ll.GetElement(2).Data.ToString());
-            ll.DeleteFirst();
-            ll.DeleteLast();
-            ll.DeletePos(1);
-            MessageBox.Show(ll.DisplayElements());
+            objListe= new LinkedList();
+            Random rnd = new Random();
+            int i = 0;
+            while (i != 5){
+                objListe.InsertFirst(rnd.Next(1, 31));
+                i++;
+            }
+            MessageBox.Show(objListe.DisplayElements(),"Adım-2");
+            btnAdim3.Enabled = true;
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnAdim3_Click(object sender, EventArgs e)
         {
-            LinkedList ll = new LinkedList();
-            ll.InsertFirst(6); 
-            ll.InsertFirst(5); 
-            ll.InsertFirst(4);
-            ll.InsertFirst(3);
-            ll.InsertFirst(2);
-            ll.InsertFirst(1);
+            try{
+                int eleman = Convert.ToInt32(txtElemanAl.Text);
+                int j=0;
+                while (true){
+                    if (eleman == objListe.GetElement(j).Data){
+                        objListe.DeletePos(j);
+                        break;
+                    }
+                    j++;
+                }
+                MessageBox.Show(objListe.DisplayElements());
+            }
+            catch (Exception ex){
+                MessageBox.Show("Aradığınız eleman bulunamadı...","Uyarı");
+            }
 
-            Uygulama2(ll.Head);
         }
-
-        public void Uygulama2(Node test)
+        public void tersCevir(ref Node head)
         {
-            if (test == null)
-                return;
+            Node currNode = head;
+            Node nextNode = null;
+            Node prevNode = null;
 
-            MessageBox.Show(test.Data.ToString());
-
-            if (test.Next != null)
-                Uygulama2(test.Next.Next);
-
-            MessageBox.Show(test.Data.ToString());
-        }
-
-        private void btnReverse_Click(object sender, EventArgs e)
-        {
-            LinkedList ll = new LinkedList();
-            ll.InsertFirst(6);
-            ll.InsertFirst(5);
-            ll.InsertFirst(4);
-            ll.InsertFirst(3);
-            ll.InsertFirst(2);
-            ll.InsertFirst(1);
-            MessageBox.Show(ll.DisplayElements());
-            Uygulama3Reverse(ref ll.Head);
-            MessageBox.Show(ll.DisplayElements());
-        }
-
-        public void Uygulama3Reverse(ref Node head)
-        {
-		    Node currNode = head;
-		    Node nextNode = null;
-		    Node prevNode = null;
-
-		    while(currNode.Next!=null)
+            while (currNode.Next != null)
             {
-			    nextNode = currNode.Next;
-			    currNode.Next = prevNode;
-			    prevNode = currNode;
-			    currNode = nextNode;
-		    }
+                nextNode = currNode.Next;
+                currNode.Next = prevNode;
+                prevNode = currNode;
+                currNode = nextNode;
+            }
             currNode.Next = prevNode;
             head = currNode;
+        }
+        private void btnAdim4_Click(object sender, EventArgs e)
+        {
+            tersCevir(ref objListe.Head);
+            MessageBox.Show(objListe.DisplayElements());
         }
 
     }

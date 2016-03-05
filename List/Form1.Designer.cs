@@ -28,60 +28,75 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnTest = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnReverse = new System.Windows.Forms.Button();
+            this.btnAdim2 = new System.Windows.Forms.Button();
+            this.txtElemanAl = new System.Windows.Forms.TextBox();
+            this.btnAdim3 = new System.Windows.Forms.Button();
+            this.btnAdim4 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // btnTest
+            // btnAdim2
             // 
-            this.btnTest.Location = new System.Drawing.Point(87, 67);
-            this.btnTest.Name = "btnTest";
-            this.btnTest.Size = new System.Drawing.Size(131, 23);
-            this.btnTest.TabIndex = 0;
-            this.btnTest.Text = "Uygulama1";
-            this.btnTest.UseVisualStyleBackColor = true;
-            this.btnTest.Click += new System.EventHandler(this.btnTest_Click);
+            this.btnAdim2.Location = new System.Drawing.Point(82, 65);
+            this.btnAdim2.Name = "btnAdim2";
+            this.btnAdim2.Size = new System.Drawing.Size(131, 23);
+            this.btnAdim2.TabIndex = 0;
+            this.btnAdim2.Text = "Adım-2";
+            this.btnAdim2.UseVisualStyleBackColor = true;
+            this.btnAdim2.Click += new System.EventHandler(this.btnAdim2_Click);
             // 
-            // button1
+            // txtElemanAl
             // 
-            this.button1.Location = new System.Drawing.Point(87, 107);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(131, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Uygulama2";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.txtElemanAl.Location = new System.Drawing.Point(82, 95);
+            this.txtElemanAl.Name = "txtElemanAl";
+            this.txtElemanAl.Size = new System.Drawing.Size(131, 20);
+            this.txtElemanAl.TabIndex = 1;
             // 
-            // btnReverse
+            // btnAdim3
             // 
-            this.btnReverse.Location = new System.Drawing.Point(87, 147);
-            this.btnReverse.Name = "btnReverse";
-            this.btnReverse.Size = new System.Drawing.Size(131, 23);
-            this.btnReverse.TabIndex = 2;
-            this.btnReverse.Text = "Uygulama3 Reverse";
-            this.btnReverse.UseVisualStyleBackColor = true;
-            this.btnReverse.Click += new System.EventHandler(this.btnReverse_Click);
+            this.btnAdim3.Enabled = false;
+            this.btnAdim3.Location = new System.Drawing.Point(82, 122);
+            this.btnAdim3.Name = "btnAdim3";
+            this.btnAdim3.Size = new System.Drawing.Size(131, 23);
+            this.btnAdim3.TabIndex = 2;
+            this.btnAdim3.Text = "Adım-3";
+            this.btnAdim3.UseVisualStyleBackColor = true;
+            this.btnAdim3.Click += new System.EventHandler(this.btnAdim3_Click);
+            // 
+            // btnAdim4
+            // 
+            this.btnAdim4.Location = new System.Drawing.Point(82, 151);
+            this.btnAdim4.Name = "btnAdim4";
+            this.btnAdim4.Size = new System.Drawing.Size(131, 23);
+            this.btnAdim4.TabIndex = 3;
+            this.btnAdim4.Text = "Adım-4";
+            this.btnAdim4.UseVisualStyleBackColor = true;
+            this.btnAdim4.Click += new System.EventHandler(this.btnAdim4_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
-            this.Controls.Add(this.btnReverse);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.btnTest);
+            this.ClientSize = new System.Drawing.Size(284, 262);
+            this.Controls.Add(this.btnAdim4);
+            this.Controls.Add(this.btnAdim3);
+            this.Controls.Add(this.txtElemanAl);
+            this.Controls.Add(this.btnAdim2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "1.Ödev Tek Yönlü LinkedList";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button btnTest;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btnReverse;
+        private System.Windows.Forms.Button btnAdim2;
+        private System.Windows.Forms.TextBox txtElemanAl;
+        private System.Windows.Forms.Button btnAdim3;
+        private System.Windows.Forms.Button btnAdim4;
     }
 }
 
