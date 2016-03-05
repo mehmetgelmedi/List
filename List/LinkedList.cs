@@ -10,9 +10,9 @@ namespace List
     {
         public override void InsertFirst(int value)
         {
-            Node tmpHead = new Node 
-            { 
-                Data = value 
+            Node tmpHead = new Node
+            {
+                Data = value
             };
 
             if (Head == null)
@@ -30,7 +30,7 @@ namespace List
 
         public override void InsertLast(int value)
         {
-        //insert last işlemi başarı ile gerçekleşiyor.
+            //insert last işlemi başarı ile gerçekleşiyor.
             Node newLast = new Node();
             if (Head == null)
             {
@@ -44,9 +44,9 @@ namespace List
                 curr = curr.Next;
             }
             newLast.Data = value;
-            curr.Next= newLast;
+            curr.Next = newLast;
             Size++;
-           
+
         }
 
         public override void InsertPos(int position, int value)
@@ -88,7 +88,7 @@ namespace List
             int i = 1;
             while (item != null)
             {
-                if (i == Size-1)
+                if (i == Size - 1)
                 {
                     item.Next = null;
                     break;
@@ -101,7 +101,7 @@ namespace List
         }
         public override void DeletePos(int position)
         {
-            
+
             Node item = Head;
             Node pos = null;
             if (position == 0) //head

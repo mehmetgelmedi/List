@@ -19,25 +19,29 @@ namespace List
         LinkedList objListe;
         private void btnAdim2_Click(object sender, EventArgs e)
         {
-            objListe= new LinkedList();
+            objListe = new LinkedList();
             Random rnd = new Random();
             int i = 0;
-            while (i != 5){
+            while (i != 5)
+            {
                 objListe.InsertFirst(rnd.Next(1, 31));
                 i++;
             }
-            MessageBox.Show(objListe.DisplayElements(),"Adım-2");
+            MessageBox.Show(objListe.DisplayElements(), "Adım-2");
             btnAdim3.Enabled = true;
 
         }
 
         private void btnAdim3_Click(object sender, EventArgs e)
         {
-            try{
+            try
+            {
                 int eleman = Convert.ToInt32(txtElemanAl.Text);
-                int j=0;
-                while (true){
-                    if (eleman == objListe.GetElement(j).Data){
+                int j = 0;
+                while (true)
+                {
+                    if (eleman == objListe.GetElement(j).Data)
+                    {
                         objListe.DeletePos(j);
                         break;
                     }
@@ -45,8 +49,9 @@ namespace List
                 }
                 MessageBox.Show(objListe.DisplayElements());
             }
-            catch (Exception ex){
-                MessageBox.Show("Aradığınız eleman bulunamadı...","Uyarı");
+            catch
+            {
+                MessageBox.Show("Aradığınız eleman bulunamadı...", "Uyarı");
             }
 
         }
