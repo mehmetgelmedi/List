@@ -46,6 +46,7 @@
             // 
             // txtElemanAl
             // 
+            this.txtElemanAl.Enabled = false;
             this.txtElemanAl.Location = new System.Drawing.Point(82, 95);
             this.txtElemanAl.Name = "txtElemanAl";
             this.txtElemanAl.Size = new System.Drawing.Size(131, 20);
@@ -64,6 +65,7 @@
             // 
             // btnAdim4
             // 
+            this.btnAdim4.Enabled = false;
             this.btnAdim4.Location = new System.Drawing.Point(82, 151);
             this.btnAdim4.Name = "btnAdim4";
             this.btnAdim4.Size = new System.Drawing.Size(131, 23);

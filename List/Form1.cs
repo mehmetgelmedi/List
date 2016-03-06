@@ -22,39 +22,38 @@ namespace List
             objListe = new LinkedList();
             Random rnd = new Random();
             int i = 0;
-            while (i != 5)
+            while (i != 100)
             {
                 objListe.InsertFirst(rnd.Next(1, 31));
                 i++;
             }
             MessageBox.Show(objListe.DisplayElements(), "Adım-2");
+            txtElemanAl.Enabled = true;
             btnAdim3.Enabled = true;
+            btnAdim4.Enabled = true;
 
         }
 
         private void btnAdim3_Click(object sender, EventArgs e)
         {
+            int eleman = 0, j = 0;
             try
             {
-                int eleman = Convert.ToInt32(txtElemanAl.Text);
-                int j = 0;
-                while (true)
+                eleman = Convert.ToInt32(txtElemanAl.Text);
+                while (j != objListe.Size)
                 {
                     if (eleman == objListe.GetElement(j).Data)
-                    {
                         objListe.DeletePos(j);
-                        break;
-                    }
                     j++;
                 }
-                MessageBox.Show(objListe.DisplayElements());
+                MessageBox.Show(objListe.DisplayElements(), "Adım-3");
             }
             catch
             {
                 MessageBox.Show("Aradığınız eleman bulunamadı...", "Uyarı");
             }
-
         }
+
         public void tersCevir(ref Node head)
         {
             Node currNode = head;
@@ -74,8 +73,9 @@ namespace List
         private void btnAdim4_Click(object sender, EventArgs e)
         {
             tersCevir(ref objListe.Head);
-            MessageBox.Show(objListe.DisplayElements());
+            MessageBox.Show(objListe.DisplayElements(), "Adım-4");
         }
 
     }
+
 }
