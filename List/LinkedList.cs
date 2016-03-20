@@ -63,6 +63,7 @@ namespace List
                 posNode.Next = newNode;
                 newNode.Next = tempNext;
             }
+            Size++;
         }
 
         public override void DeleteFirst()
